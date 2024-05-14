@@ -21,6 +21,4 @@ I’m now a Ph.D. student supervised by <a href="https://scholar.google.co.uk/ci
 
 {% include_relative _includes/awards.md %}
 
-<!--
 {% include_relative _includes/services.md %}
--->
