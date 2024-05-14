@@ -1,0 +1,1 @@
+- **[Jul. 2023]** <a href="https://www.aicitychallenge.org/2023-challenge-winners/" target="_blank">*2nd-Place Award*</a> for AI City Challenge 2023 - Naturalistic Driving Action Recognition (CVPR2023)
