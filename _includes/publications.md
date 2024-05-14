@@ -3,8 +3,6 @@
 <div class="publications">
 <ol class="bibliography">
 
-{% for link in site.data.publications.main %}
-
 <!-- template
 <li>
 <div class="pub-row">
@@ -66,8 +64,6 @@
 </li>
 
 <br>
-
-{% endfor %}
 
 </ol>
 </div>
