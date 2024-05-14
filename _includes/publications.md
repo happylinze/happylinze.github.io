@@ -54,7 +54,7 @@
   
   <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
       <div class="title"><a href="https://openaccess.thecvf.com/content/CVPR2023W/AICity/html/Li_Action_Probability_Calibration_for_Efficient_Naturalistic_Driving_Action_Localization_CVPRW_2023_paper.html">Action Probability Calibration for Efficient Naturalistic Driving Action Localization</a></div>
-      <div class="author">Rongchang Li, Cong Wu, **Linze Li**, Zhongwei Shen, Tianyang Xu, Xiao-jun Wu, Xi Li, Jiwen Lu, Josef Kittler</div>
+      <div class="author">Rongchang Li, Cong Wu, <strong>Linze Li</strong>, Zhongwei Shen, Tianyang Xu, Xiao-jun Wu, Xi Li, Jiwen Lu, Josef Kittler</div>
       <div class="periodical"><em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops, 2023</em>
       </div>
     <div class="links">
