@@ -1,12 +1,15 @@
 main:
 
-  - title: TENet: Targetness Entanglement Incorporating with Multi-Scale Pooling and Mutually-Guided Fusion for RGB-E Object Tracking
-    authors: Pengcheng Shao, Tianyang Xu, Zhangyong Tang, <strong>Linze Li</strong>, Xiao-Jun Wu*, Josef Kittler
-    conference_short: arXiv
-    conference: arXiv, 2023.
-    pdf: https://arxiv.org/abs/2405.05004
-    code: https://github.com/SSSpc333/TENet
-    image: ./assets/img/conference-and-journal/TENet.png
+  # - title: TENet: Targetness Entanglement Incorporating with Multi-Scale Pooling and Mutually-Guided Fusion for RGB-E Object Tracking
+  #   authors: Pengcheng Shao, Tianyang Xu, Zhangyong Tang, <strong>Linze Li</strong>, Xiao-Jun Wu*, Josef Kittler
+  #   conference_short: arXiv
+  #   conference: arXiv, 2023.
+  #   pdf: https://arxiv.org/pdf/2405.05004.pdf
+  #   code: https://github.com/SSSpc333/TENet
+  #   image: ./assets/img/conference-and-journal/TENet.png
+  #   # page: https://class-il.mpi-inf.mpg.de/mnemonics/
+  #   # bibtex: https://bib.yliu.me/MICCAI23.txt
+  #   # notes: Early Accept
 
   - title: Action Probability Calibration for Efficient Naturalistic Driving Action Localization
     authors: Rongchang Li, Cong Wu, <strong>Linze Li</strong>, Zhongwei Shen, Tianyang Xu, Xiao-jun Wu, Xi Li, Jiwen Lu, Josef Kittler
