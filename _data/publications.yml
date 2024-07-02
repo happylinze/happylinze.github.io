@@ -1,6 +1,6 @@
 main:
 
-  - title: TENet: Targetness Entanglement Incorporating with Multi-Scale Pooling and Mutually-Guided Fusion for RGB-E Object Tracking
+  - title: "TENet: Targetness Entanglement Incorporating with Multi-Scale Pooling and Mutually-Guided Fusion for RGB-E Object Tracking"
     authors: Pengcheng Shao, Tianyang Xu, Zhangyong Tang, <strong>Linze Li</strong>, Xiao-Jun Wu, Josef Kittler
     conference_short: arXiv
     conference: arXiv, 2023.
