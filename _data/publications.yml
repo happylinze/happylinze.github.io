@@ -6,9 +6,7 @@ main:
     conference: arXiv, 2023.
     pdf: https://arxiv.org/abs/2405.05004
     code: https://github.com/SSSpc333/TENet
-    # bibtex: https://bib.yliu.me/MICCAI23.txt
     image: ./assets/img/conference-and-journal/TENet.png
-    # notes: Early Accept
 
   - title: Action Probability Calibration for Efficient Naturalistic Driving Action Localization
     authors: Rongchang Li, Cong Wu, <strong>Linze Li</strong>, Zhongwei Shen, Tianyang Xu, Xiao-jun Wu, Xi Li, Jiwen Lu, Josef Kittler
@@ -16,7 +14,7 @@ main:
     conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops, 2023
     pdf: https://openaccess.thecvf.com/content/CVPR2023W/AICity/papers/Li_Action_Probability_Calibration_for_Efficient_Naturalistic_Driving_Action_Localization_CVPRW_2023_paper.pdf
     code: https://github.com/RongchangLi/AICity2023_DrivingAction
+    image: ./assets/img/workshop/DrivingTAL.png
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     # notes: --
-    image: ./assets/img/workshop/DrivingTAL.png
