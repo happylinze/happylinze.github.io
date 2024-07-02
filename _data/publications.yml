@@ -15,6 +15,3 @@ main:
     pdf: https://openaccess.thecvf.com/content/CVPR2023W/AICity/papers/Li_Action_Probability_Calibration_for_Efficient_Naturalistic_Driving_Action_Localization_CVPRW_2023_paper.pdf
     code: https://github.com/RongchangLi/AICity2023_DrivingAction
     image: ./assets/img/workshop/DrivingTAL.png
-    # page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    # notes: --
