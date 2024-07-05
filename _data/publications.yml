@@ -31,7 +31,7 @@ main:
   - title: "Action Probability Calibration for Efficient Naturalistic Driving Action Localization"
     authors: Rongchang Li, Cong Wu, <strong>Linze Li</strong>, Zhongwei Shen, Tianyang Xu, Xiao-jun Wu, Xi Li, Jiwen Lu, Josef Kittler
     conference_short: CVPR Workshop
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR) Workshops</strong>, 2023
+    conference: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops <strong>(CVPR Workshop)</strong>, 2023
     pdf: https://openaccess.thecvf.com/content/CVPR2023W/AICity/papers/Li_Action_Probability_Calibration_for_Efficient_Naturalistic_Driving_Action_Localization_CVPRW_2023_paper.pdf
     code: https://github.com/RongchangLi/AICity2023_DrivingAction
     image: ./assets/img/workshop/DrivingTAL.png
