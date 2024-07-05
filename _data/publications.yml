@@ -15,7 +15,7 @@ main:
     # pdf: https://arxiv.org/pdf/2306.00988.pdf
     # code: https://github.com/MrGiovanni/ContinualLearning
     image: ./assets/img/conference-and-journal/c2c_eccv2024.png
-    # notes: Conditionally Accepted
+    notes: Conditionally Accepted
 
   - title: "TENet: Targetness Entanglement Incorporating with Multi-Scale Pooling and Mutually-Guided Fusion for RGB-E Object Tracking"
     authors: Pengcheng Shao, Tianyang Xu, Zhangyong Tang, <strong>Linze Li</strong>, Xiao-Jun Wu, Josef Kittler
