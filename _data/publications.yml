@@ -1,5 +1,22 @@
 main:
 
+    - title: "Efficient Few-Shot Action Recognition via Multi-Level Post-Reasoning"
+    authors: Cong Wu, Xiao-Jun Wu, <strong>Linze Li</strong>, Tianyang Xu, Zhenhua Feng, Josef Kittler
+    conference_short: ECCV
+    conference: European Conference on Computer Vision <strong>(ECCV)</strong>, 2024.
+    code: https://github.com/cong-wu/EMP-Net
+    notes: Conditionally Accepted
+    image: ./assets/img/conference-and-journal/emp.png
+  
+  - title: "C2C: Component-to-Composition Learning for Zero-Shot Compositional Action Recognition"
+    authors: Rongchang Li, Zhenhua Feng, Tianyang Xu, <strong>Linze Li</strong>, Xiao-Jun Wu, Muhammad Awais, Sara Ahmed, Josef Kittler  
+    conference_short: ECCV
+    conference: European Conference on Computer Vision <strong>(ECCV)</strong>, 2024.
+    # pdf: https://arxiv.org/pdf/2306.00988.pdf
+    # code: https://github.com/MrGiovanni/ContinualLearning
+    image: ./assets/img/conference-and-journal/c2c_eccv2024.png
+    # notes: Conditionally Accepted
+
   - title: "TENet: Targetness Entanglement Incorporating with Multi-Scale Pooling and Mutually-Guided Fusion for RGB-E Object Tracking"
     authors: Pengcheng Shao, Tianyang Xu, Zhangyong Tang, <strong>Linze Li</strong>, Xiao-Jun Wu, Josef Kittler
     conference_short: arXiv
@@ -11,10 +28,10 @@ main:
     # bibtex: https://bib.yliu.me/MICCAI23.txt
     # notes: Early Accept
 
-  - title: Action Probability Calibration for Efficient Naturalistic Driving Action Localization
+  - title: "Action Probability Calibration for Efficient Naturalistic Driving Action Localization"
     authors: Rongchang Li, Cong Wu, <strong>Linze Li</strong>, Zhongwei Shen, Tianyang Xu, Xiao-jun Wu, Xi Li, Jiwen Lu, Josef Kittler
     conference_short: CVPR Workshop
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops, 2023
+    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR) Workshops</strong>, 2023
     pdf: https://openaccess.thecvf.com/content/CVPR2023W/AICity/papers/Li_Action_Probability_Calibration_for_Efficient_Naturalistic_Driving_Action_Localization_CVPRW_2023_paper.pdf
     code: https://github.com/RongchangLi/AICity2023_DrivingAction
     image: ./assets/img/workshop/DrivingTAL.png
