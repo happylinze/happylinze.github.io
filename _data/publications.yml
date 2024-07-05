@@ -1,6 +1,6 @@
 main:
 
-    - title: "Efficient Few-Shot Action Recognition via Multi-Level Post-Reasoning"
+  - title: "Efficient Few-Shot Action Recognition via Multi-Level Post-Reasoning"
     authors: Cong Wu, Xiao-Jun Wu, <strong>Linze Li</strong>, Tianyang Xu, Zhenhua Feng, Josef Kittler
     conference_short: ECCV
     conference: European Conference on Computer Vision <strong>(ECCV)</strong>, 2024.
