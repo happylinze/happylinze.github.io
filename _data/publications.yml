@@ -5,15 +5,15 @@ main:
     conference_short: ECCV
     conference: European Conference on Computer Vision <strong>(ECCV)</strong>, 2024.
     code: https://github.com/cong-wu/EMP-Net
-    notes: Conditionally Accepted
+    # notes: Conditionally Accepted
     image: ./assets/img/conference-and-journal/emp.png
   
   - title: "C2C: Component-to-Composition Learning for Zero-Shot Compositional Action Recognition"
     authors: Rongchang Li, Zhenhua Feng, Tianyang Xu, <strong>Linze Li</strong>, Xiao-Jun Wu, Muhammad Awais, Sara Ahmed, Josef Kittler  
     conference_short: ECCV
     conference: European Conference on Computer Vision <strong>(ECCV)</strong>, 2024.
-    # pdf: https://arxiv.org/pdf/2306.00988.pdf
-    # code: https://github.com/MrGiovanni/ContinualLearning
+    pdf: https://arxiv.org/abs/2407.06113
+    code: https://github.com/RongchangLi/ZSCAR_C2C
     image: ./assets/img/conference-and-journal/c2c_eccv2024.png
     notes: Conditionally Accepted
 
