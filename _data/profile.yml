@@ -47,7 +47,7 @@ interests:
 news_visible: 5
 clustrmaps_id: bk6R21501bsbPITJpL1MBCoMvPQrCGY6gTAttPyXYYE
 job_market:
-  enabled: true
+  enabled: false
   status: Open to positions
   headline: I build video understanding systems that recognize human actions and
     interactions from few or zero labelled examples.
