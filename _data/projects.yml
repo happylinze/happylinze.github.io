@@ -1,0 +1,22 @@
+# The first project with an `image` is shown as a large featured card.
+# Keep each description to one sentence.
+- name: HuggingFace-Manager
+  link: https://github.com/happylinze/HuggingFace-Manager
+  image: /assets/img/projects/hfmanager.png
+  description: >-
+    A cross-platform desktop app for searching, downloading and managing
+    Hugging Face models, with multi-threaded downloads, cache cleanup and
+    one-click GGUF quantization.
+  tags: [Python, Desktop app, Aria2, GGUF]
+- name: UAV-SAR
+  link: https://github.com/happylinze/UAV-SAR
+  description: An ensemble of three skeleton models for action recognition on drone footage, 2nd place at ICME 2024 MMVRAC.
+  tags: [PyTorch, Skeleton]
+- name: UAV_ReID
+  link: https://github.com/happylinze/UAV_ReID
+  description: Person re-identification on drone footage built on AGW, 2nd place at ICME 2024 MMVRAC.
+  tags: [PyTorch, Re-ID]
+- name: AICity2023 Driving Action
+  link: https://github.com/RongchangLi/AICity2023_DrivingAction
+  description: Driving action localization with probability calibration, 2nd place at the AI City Challenge 2023.
+  tags: [PyTorch, Localization]
