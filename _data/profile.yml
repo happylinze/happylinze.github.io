@@ -3,18 +3,25 @@ position: Ph.D. Student
 affiliation: Jiangnan University
 affiliation_link: https://www.jiangnan.edu.cn
 email: linze.li@stu.jiangnan.edu.cn
-avatar: ""
-cv: ""
-google_scholar: https://scholar.google.com/citations?user=62sZAVoAAAAJ
+google_scholar: https://scholar.google.com/citations?user=ZZuFlDEAAAAJ
 github: https://github.com/happylinze
-linkedin: ""
-twitter: ""
-seo_description: Linze Li is a Ph.D. student at Jiangnan University working on video understanding and action recognition.
-seo_keywords: Linze Li, Jiangnan University, action recognition, video understanding, computer vision
-about: |-
-  I am a Ph.D. student at [Jiangnan University](https://www.jiangnan.edu.cn), supervised by [Prof. Xiao-Jun Wu](https://scholar.google.com/citations?user=5IST34sAAAAJ). My research is on **video understanding**, with a focus on **human action recognition**: learning from few or zero labelled examples, modelling skeletons, and localizing actions in long, untrimmed videos.
+seo_description: Linze Li is a Ph.D. student at Jiangnan University working on
+  video understanding and action recognition.
+seo_keywords: Linze Li, Jiangnan University, action recognition, video
+  understanding, computer vision
+about: >-
+  I am a Ph.D. student at [Jiangnan University](https://www.jiangnan.edu.cn),
+  supervised by [Prof. Xiao-Jun
+  Wu](https://scholar.google.com/citations?user=ZZuFlDEAAAAJ). My research is on
+  **video understanding**, with a focus on **human action recognition**:
+  learning from few or zero labelled examples, modelling skeletons, and
+  localizing actions in long, untrimmed videos.
 
-  I also enjoy turning research into working systems. With my teammates I have placed in the top three at challenges held with CVPR, ICCV, ECCV and ICME, and I build open-source tools such as [HuggingFace-Manager](https://github.com/happylinze/HuggingFace-Manager).
+
+  I also enjoy turning research into working systems. With my teammates I have
+  placed in the top three at challenges held with CVPR, ICCV, ECCV and ICME, and
+  I build open-source tools such as
+  [HuggingFace-Manager](https://github.com/happylinze/HuggingFace-Manager).
 interests:
   - Action recognition
   - Video understanding
@@ -27,6 +34,7 @@ clustrmaps_id: bk6R21501bsbPITJpL1MBCoMvPQrCGY6gTAttPyXYYE
 job_market:
   enabled: false
   status: Open to positions
-  available: ""
-  headline: I build video understanding systems that recognize human actions from few or zero labelled examples.
-  seeking: I am looking for research scientist, research engineer and postdoctoral positions in video understanding and multimodal learning.
+  headline: I build video understanding systems that recognize human actions from
+    few or zero labelled examples.
+  seeking: I am looking for research scientist, research engineer and postdoctoral
+    positions in video understanding and multimodal learning.
