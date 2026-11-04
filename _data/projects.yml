@@ -1,13 +1,9 @@
 # The first project with an `image` is shown as a large featured card.
 # Keep each description to one sentence.
-- name: HuggingFace-Manager
-  link: https://github.com/happylinze/HuggingFace-Manager
-  image: /assets/img/projects/hfmanager.png
-  description: >-
-    A cross-platform desktop app for searching, downloading and managing
-    Hugging Face models, with multi-threaded downloads, cache cleanup and
-    one-click GGUF quantization.
-  tags: [Python, Desktop app, Aria2, GGUF]
+- name: multi-modal-tsm
+  link: https://github.com/happylinze/multi-modal-tsm
+  description: Official baseline for Track 3, Multi-Modal Action Recognition, of the ICPR 2024 Multi-Modal Visual Pattern Recognition Challenge.
+  tags: [PyTorch, RGB · Depth · IR, Baseline]
 - name: UAV-SAR
   link: https://github.com/happylinze/UAV-SAR
   description: An ensemble of three skeleton models for action recognition on drone footage, 2nd place at ICME 2024 MMVRAC.
@@ -20,3 +16,7 @@
   link: https://github.com/RongchangLi/AICity2023_DrivingAction
   description: Driving action localization with probability calibration, 2nd place at the AI City Challenge 2023.
   tags: [PyTorch, Localization]
+- name: HuggingFace-Manager
+  link: https://github.com/happylinze/HuggingFace-Manager
+  description: A desktop app for searching, downloading and managing Hugging Face models.
+  tags: [Python, Desktop app]

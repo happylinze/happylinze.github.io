@@ -2,39 +2,33 @@ name: Linze Li
 position: Ph.D. Student
 affiliation: Jiangnan University
 affiliation_link: https://www.jiangnan.edu.cn
+visiting:
+  position: Visiting Ph.D. Researcher
+  affiliation: CVSSP, University of Surrey
+  link: https://www.surrey.ac.uk/centre-vision-speech-signal-processing
 email: linze.li@stu.jiangnan.edu.cn
 google_scholar: https://scholar.google.com/citations?user=ZZuFlDEAAAAJ
 github: https://github.com/happylinze
-seo_description: Linze Li is a Ph.D. student at Jiangnan University working on
-  video understanding and action recognition.
-seo_keywords: Linze Li, Jiangnan University, action recognition, video
-  understanding, computer vision
-about: >-
-  I am a Ph.D. student at [Jiangnan University](https://www.jiangnan.edu.cn),
-  supervised by [Prof. Xiao-Jun
-  Wu](https://scholar.google.com/citations?user=ZZuFlDEAAAAJ). My research is on
-  **video understanding**, with a focus on **human action recognition**:
-  learning from few or zero labelled examples, modelling skeletons, and
-  localizing actions in long, untrimmed videos.
+seo_description: Linze Li is a Ph.D. student at Jiangnan University and a visiting Ph.D. researcher at CVSSP, University of Surrey, working on video understanding, action recognition and multimodal human interaction understanding.
+seo_keywords: Linze Li, Jiangnan University, University of Surrey, CVSSP, action recognition, video understanding, human interaction understanding, multimodal learning, computer vision
+about: |-
+  I am a Ph.D. student at [Jiangnan University](https://www.jiangnan.edu.cn), supervised by [Prof. Xiao-Jun Wu](https://scholar.google.com/citations?user=5IST34sAAAAJ). I am currently a visiting Ph.D. researcher at the [Centre for Vision, Speech and Signal Processing (CVSSP)](https://www.surrey.ac.uk/centre-vision-speech-signal-processing), University of Surrey, working with [Prof. Josef Kittler](https://www.surrey.ac.uk/cvssp/people/josef_kittler/).
 
+  My research is on **video understanding**, with a focus on **human action recognition** and **multimodal understanding of human-human interaction**: learning from few or zero labelled examples, modelling skeletons, localizing actions in long, untrimmed videos, and recognizing events in social interactions from video, audio and language.
 
-  I also enjoy turning research into working systems. With my teammates I have
-  placed in the top three at challenges held with CVPR, ICCV, ECCV and ICME, and
-  I build open-source tools such as
-  [HuggingFace-Manager](https://github.com/happylinze/HuggingFace-Manager).
+  I also enjoy turning research into working systems. With my teammates I have placed in the top three at challenges held with CVPR, ICCV, ECCV and ICME.
 interests:
   - Action recognition
   - Video understanding
+  - Human interaction understanding
+  - Multi-modal learning
   - Few- & zero-shot learning
   - Skeleton-based modelling
   - Temporal action localization
-  - Multi-modal learning
 news_visible: 5
 clustrmaps_id: bk6R21501bsbPITJpL1MBCoMvPQrCGY6gTAttPyXYYE
 job_market:
   enabled: false
   status: Open to positions
-  headline: I build video understanding systems that recognize human actions from
-    few or zero labelled examples.
-  seeking: I am looking for research scientist, research engineer and postdoctoral
-    positions in video understanding and multimodal learning.
+  headline: I build video understanding systems that recognize human actions and interactions from few or zero labelled examples.
+  seeking: I am looking for research scientist, research engineer and postdoctoral positions in video understanding and multimodal learning.
