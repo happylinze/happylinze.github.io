@@ -34,3 +34,22 @@
     if (el) observer.observe(el);
   });
 })();
+
+// Copy buttons for BibTeX entries.
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest && e.target.closest('.bib-copy');
+  if (!btn) return;
+  var code = btn.parentNode.querySelector('code');
+  var text = code ? code.textContent : '';
+  function done(label) {
+    btn.textContent = label;
+    setTimeout(function () { btn.textContent = 'Copy'; }, 1600);
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(function () { done('Copied'); }, function () { done('Press Ctrl+C'); });
+  } else {
+    var r = document.createRange(); r.selectNodeContents(code);
+    var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+    done('Press Ctrl+C');
+  }
+});

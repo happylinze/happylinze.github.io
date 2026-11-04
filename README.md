@@ -2,22 +2,38 @@
 
 Personal academic homepage of Linze Li, served by GitHub Pages at https://happylinze.github.io.
 
-## Updating content
+## Editing content without code (recommended)
 
-Everything on the page comes from a few plain files. You rarely need to touch HTML.
+The site is set up for [Pages CMS](https://pagescms.org), a free editor that gives every section a form.
 
-| What | Where |
+1. Go to https://app.pagescms.org and sign in with GitHub.
+2. Install the Pages CMS GitHub App on this repository when asked.
+3. Open `happylinze/happylinze.github.io`.
+
+You can now add, edit, reorder and delete news, publications, competitions, projects and service entries.
+You can also upload figures, a profile photo and a CV.
+Every save is a commit, and GitHub Pages republishes the site within a few minutes.
+The forms are defined in `.pages.yml`.
+
+## Job-market mode
+
+Open **Profile & About** in Pages CMS and turn on **Show job-market card**.
+The page then shows an "Open to positions" card at the top and a badge under your name.
+Turn it off to go back to the normal academic homepage.
+Without Pages CMS, set `job_market.enabled` to `true` or `false` in `_data/profile.yml`.
+
+## Where content lives
+
+| What | File |
 | --- | --- |
-| Name, title, email, links, photo, CV | `_config.yml` |
-| News items | `_data/news.yml` |
-| Publications | `_data/publications.yml` |
+| Name, links, photo, CV, About text, interests, job-market mode | `_data/profile.yml` |
+| News | `_data/news.yml` |
+| Publications, including BibTeX | `_data/publications.yml` |
 | Competition results | `_data/awards.yml` |
 | Projects | `_data/projects.yml` |
 | Reviewing and other service | `_data/services.yml` |
-| About text and research interests | `index.html`, the `#about` section |
 
-Images for publications go in `assets/img/publications/`, project screenshots in `assets/img/projects/`.
-To use a real profile photo, add it under `assets/img/` and set `avatar` in `_config.yml`.
+You can also edit these files directly on GitHub with the pencil icon.
 
 ## Local preview
 

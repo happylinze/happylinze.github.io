@@ -1,42 +1,13 @@
 # ---------------------------------------------------------------------------
-# Site settings. Edit the profile below; page content lives in _data/*.yml
+# Build settings only. All page content, including your profile and the
+# job-market switch, lives in _data/*.yml and can be edited with Pages CMS
+# (see README.md).
 # ---------------------------------------------------------------------------
 url: "https://happylinze.github.io"
 baseurl: ""
 lang: en
-
 title: Linze Li
-description: >-
-  Linze Li is a Ph.D. student at Jiangnan University working on video
-  understanding and action recognition.
-keywords: Linze Li, Jiangnan University, action recognition, video understanding, computer vision
 
-# Profile shown in the sidebar
-name: Linze Li
-position: Ph.D. Student
-affiliation: Jiangnan University
-affiliation_link: https://www.jiangnan.edu.cn
-email: linze.li@stu.jiangnan.edu.cn
-
-# Profile photo. Put a square image (at least 400x400) in assets/img/ and set
-# the path below, e.g. avatar: /assets/img/avatar.jpg
-# Leave it empty to show an initials monogram instead.
-avatar: ""
-
-# Links. Delete or leave empty any you don't use.
-google_scholar: https://scholar.google.com/citations?user=62sZAVoAAAAJ
-github: https://github.com/happylinze
-cv: ""            # e.g. /assets/files/linze_li_cv.pdf
-linkedin: ""
-twitter: ""
-
-# How many news items to show before "Show all"
-news_visible: 5
-
-# Visitor map widget (ClustrMaps). Leave empty to disable.
-clustrmaps_id: bk6R21501bsbPITJpL1MBCoMvPQrCGY6gTAttPyXYYE
-
-# Build settings
 markdown: kramdown
 exclude:
   - Gemfile

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" font-family="Helvetica, Arial, sans-serif">
+  <rect width="400" height="250" fill="#ffffff"/>
+  <!-- input skeleton -->
+  <g stroke="#1b1c1f" stroke-width="2.4" stroke-linecap="round" fill="none">
+    <circle cx="52" cy="78" r="9" fill="#ffffff"/>
+    <path d="M52 87v42M52 98l-18 14M52 98l20-10M52 129l-14 30M52 129l15 28"/>
+  </g>
+  <g fill="#0e6b6b">
+    <circle cx="52" cy="98" r="3.2"/><circle cx="34" cy="112" r="3.2"/><circle cx="72" cy="88" r="3.2"/>
+    <circle cx="52" cy="129" r="3.2"/><circle cx="38" cy="159" r="3.2"/><circle cx="67" cy="157" r="3.2"/>
+  </g>
+  <text x="52" y="186" text-anchor="middle" font-size="12" fill="#5d6068">Skeleton</text>
+  <text x="52" y="201" text-anchor="middle" font-size="12" fill="#5d6068">sequence</text>
+  <!-- modalities -->
+  <text x="52" y="226" text-anchor="middle" font-size="10" fill="#8a8d94">joint · bone · motion · angle</text>
+  <!-- arrows to branches -->
+  <g stroke="#9aa0a6" stroke-width="1.8" fill="none" marker-end="url(#a)">
+    <path d="M90 120 C110 120 112 62 136 62"/>
+    <path d="M90 120 H136"/>
+    <path d="M90 120 C110 120 112 178 136 178"/>
+    <path d="M276 62 C298 62 296 120 312 120"/>
+    <path d="M276 120 H312"/>
+    <path d="M276 178 C298 178 296 120 312 120"/>
+  </g>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9aa0a6"/></marker></defs>
+  <!-- branches -->
+  <g font-size="13" font-weight="600" text-anchor="middle">
+    <rect x="140" y="42" width="134" height="40" rx="8" fill="#e2efed" stroke="#0e6b6b" stroke-width="1.5"/>
+    <text x="207" y="60" fill="#0e6b6b">InfoGCN</text>
+    <text x="207" y="75" font-size="10.5" font-weight="500" fill="#0e6b6b">+ FR-Head</text>
+    <rect x="140" y="100" width="134" height="40" rx="8" fill="#f6ecd2" stroke="#a87b06" stroke-width="1.5"/>
+    <text x="207" y="125" fill="#7a5a04">Skeleton-MixFormer</text>
+    <rect x="140" y="158" width="134" height="40" rx="8" fill="#ece6f8" stroke="#6b4fb3" stroke-width="1.5"/>
+    <text x="207" y="183" fill="#5a3fa0">STTFormer</text>
+  </g>
+  <!-- ensemble -->
+  <circle cx="340" cy="120" r="26" fill="#0e6b6b"/>
+  <text x="340" y="117" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">Σ</text>
+  <text x="340" y="132" text-anchor="middle" font-size="8.5" font-weight="600" fill="#e2efed">ENSEMBLE</text>
+  <text x="340" y="168" text-anchor="middle" font-size="11" fill="#5d6068">Action</text>
+  <text x="340" y="182" text-anchor="middle" font-size="11" fill="#5d6068">class</text>
+  <text x="207" y="226" text-anchor="middle" font-size="10" fill="#8a8d94">complementary graph · hybrid · transformer views</text>
+</svg>

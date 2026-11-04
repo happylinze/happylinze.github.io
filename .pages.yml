@@ -1,0 +1,170 @@
+# Pages CMS configuration: https://app.pagescms.org
+# Gives every content file on the homepage an edit form, so you can add,
+# change, reorder and delete entries without touching code.
+
+settings:
+  content:
+    merge: true
+
+media:
+  - name: publications
+    label: Publication figures
+    input: assets/img/publications
+    output: /assets/img/publications
+    categories: [image]
+  - name: projects
+    label: Project screenshots
+    input: assets/img/projects
+    output: /assets/img/projects
+    categories: [image]
+  - name: profile
+    label: Profile photo
+    input: assets/img
+    output: /assets/img
+    categories: [image]
+  - name: files
+    label: CV and documents
+    input: assets/files
+    output: /assets/files
+    categories: [document]
+
+content:
+  - name: profile
+    label: Profile & About
+    type: file
+    path: _data/profile.yml
+    format: yaml
+    fields:
+      - { name: name, label: Name, type: string, required: true }
+      - { name: position, label: Position, type: string }
+      - { name: affiliation, label: Affiliation, type: string }
+      - { name: affiliation_link, label: Affiliation website, type: string }
+      - { name: email, label: Email, type: string }
+      - name: avatar
+        label: Profile photo
+        description: A square photo, at least 400×400. Leave empty to show initials.
+        type: image
+        options: { media: profile }
+      - name: cv
+        label: CV (PDF)
+        description: Leave empty to hide the CV button.
+        type: file
+        options: { media: files }
+      - { name: google_scholar, label: Google Scholar URL, type: string }
+      - { name: github, label: GitHub URL, type: string }
+      - { name: linkedin, label: LinkedIn URL, type: string }
+      - { name: twitter, label: X / Twitter URL, type: string }
+      - name: about
+        label: About text
+        description: "Markdown. Use **bold** and [link text](https://...). Leave a blank line between paragraphs."
+        type: text
+      - name: interests
+        label: Research interests
+        type: string
+        list: true
+      - name: job_market
+        label: Job-market mode
+        description: Turn on to show an "Open to positions" card at the top of the page.
+        type: object
+        fields:
+          - { name: enabled, label: Show job-market card, type: boolean }
+          - { name: status, label: Badge text, type: string }
+          - { name: available, label: Availability, description: "e.g. Available from summer 2027", type: string }
+          - { name: headline, label: One-line research pitch, type: text }
+          - { name: seeking, label: Positions you are looking for, type: text }
+      - { name: news_visible, label: News items shown before "Show earlier news", type: number, options: { min: 1 } }
+      - { name: seo_description, label: Search engine description, type: text }
+      - { name: seo_keywords, label: Search engine keywords, type: string }
+      - { name: clustrmaps_id, label: ClustrMaps visitor map ID, description: Leave empty to hide the map., type: string }
+
+  - name: news
+    label: News
+    type: file
+    path: _data/news.yml
+    format: yaml
+    list: true
+    fields:
+      - { name: date, label: Date, description: "e.g. Feb 2026. Keep the newest item at the top.", type: string, required: true }
+      - { name: text, label: Text, description: "Markdown. Use **bold** and [link text](https://...).", type: text, required: true }
+
+  - name: publications
+    label: Publications
+    type: file
+    path: _data/publications.yml
+    format: yaml
+    list: true
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: authors, label: Authors, description: Comma-separated. Your own name is highlighted automatically., type: string, required: true }
+      - { name: venue, label: Venue (full), description: "e.g. European Conference on Computer Vision (ECCV)", type: string, required: true }
+      - { name: venue_short, label: Venue (short), description: "e.g. ECCV. Shown on the thumbnail badge.", type: string, required: true }
+      - { name: year, label: Year, type: number, required: true }
+      - { name: highlight, label: Highlight tag, description: "Optional, e.g. Oral, Spotlight, Best Paper", type: string }
+      - { name: note, label: Award note, description: "Optional, shown with a trophy, e.g. 2nd place, AI City Challenge", type: string }
+      - name: image
+        label: Thumbnail figure
+        description: Optional. Without one, a tile with the venue name is shown.
+        type: image
+        options: { media: publications }
+      - { name: pdf, label: Paper / PDF link, type: string }
+      - { name: arxiv, label: arXiv link, type: string }
+      - { name: code, label: Code link, type: string }
+      - { name: page, label: Project page link, type: string }
+      - { name: bibtex, label: BibTeX, description: Paste the full entry. Readers get a BibTeX button with copy., type: text }
+
+  - name: awards
+    label: Honors & Competitions
+    type: file
+    path: _data/awards.yml
+    format: yaml
+    list: true
+    fields:
+      - name: rank
+        label: Rank
+        type: select
+        required: true
+        options:
+          values:
+            - { name: "1", label: 1st place }
+            - { name: "2", label: 2nd place }
+            - { name: "3", label: 3rd place }
+            - { name: "Novel", label: Special award }
+      - { name: label, label: Award name, description: "Only for special awards, e.g. Most Novel Submission", type: string }
+      - { name: challenge, label: Challenge, type: string, required: true }
+      - { name: track, label: Track, type: string }
+      - { name: venue, label: Venue and year, description: "e.g. CVPR 2023", type: string, required: true }
+      - { name: link, label: Challenge website, type: string }
+      - { name: code, label: Code link, type: string }
+
+  - name: projects
+    label: Projects
+    type: file
+    path: _data/projects.yml
+    format: yaml
+    list: true
+    fields:
+      - { name: name, label: Name, type: string, required: true }
+      - { name: link, label: Link, type: string, required: true }
+      - name: image
+        label: Screenshot
+        description: Optional. The first project with a screenshot becomes the large featured card.
+        type: image
+        options: { media: projects }
+      - { name: description, label: One-sentence description, type: text }
+      - { name: tags, label: Tags, type: string, list: true }
+
+  - name: services
+    label: Service
+    type: file
+    path: _data/services.yml
+    format: yaml
+    list: true
+    fields:
+      - { name: role, label: Role, description: "e.g. Conference Reviewer, Journal Reviewer", type: string, required: true }
+      - name: items
+        label: Venues
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string, required: true }
+          - { name: link, label: Link, type: string }
