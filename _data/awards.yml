@@ -1,4 +1,16 @@
-# rank: 1, 2, 3 or a short label such as "Novel"
+# rank: "1", "2", "3" or "Novel". Optional: label (replaces "2nd Place"), note, code
+- rank: "2"
+  challenge: ChaLearn UDIVA-HHOI Challenge
+  track: Multimodal Exocentric Event Recognition
+  venue: ECCV 2026
+  link: https://lap.chalearn.eu/public/udiva-hhoi-challenge-eccv26
+- rank: "3"
+  label: 3rd among participating teams
+  challenge: ChaLearn UDIVA-HHOI Challenge
+  track: Multimodal Exocentric Causal Event Grounding
+  note: Zero-shot VLM pipeline with Qwen3.6-27B
+  venue: ECCV 2026
+  link: https://lap.chalearn.eu/public/udiva-hhoi-challenge-eccv26
 - rank: "2"
   challenge: Perception Test Challenge
   track: Temporal Sound Localisation

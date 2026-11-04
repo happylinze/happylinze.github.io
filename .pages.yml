@@ -39,6 +39,14 @@ content:
       - { name: position, label: Position, type: string }
       - { name: affiliation, label: Affiliation, type: string }
       - { name: affiliation_link, label: Affiliation website, type: string }
+      - name: visiting
+        label: Visiting position
+        description: Optional second affiliation shown under the main one. Leave the institution empty to hide it.
+        type: object
+        fields:
+          - { name: position, label: Position, description: "e.g. Visiting Ph.D. Researcher", type: string }
+          - { name: affiliation, label: Institution, description: "e.g. CVSSP, University of Surrey", type: string }
+          - { name: link, label: Institution website, type: string }
       - { name: email, label: Email, type: string }
       - name: avatar
         label: Profile photo
@@ -129,12 +137,13 @@ content:
             - { name: "2", label: 2nd place }
             - { name: "3", label: 3rd place }
             - { name: "Novel", label: Special award }
-      - { name: label, label: Award name, description: "Only for special awards, e.g. Most Novel Submission", type: string }
+      - { name: label, label: Award name, description: "Optional. Replaces the default 2nd Place text, e.g. Most Novel Submission", type: string }
       - { name: challenge, label: Challenge, type: string, required: true }
       - { name: track, label: Track, type: string }
       - { name: venue, label: Venue and year, description: "e.g. CVPR 2023", type: string, required: true }
       - { name: link, label: Challenge website, type: string }
       - { name: code, label: Code link, type: string }
+      - { name: note, label: Note, description: "Optional short line, e.g. the method used", type: string }
 
   - name: projects
     label: Projects

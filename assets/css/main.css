@@ -105,6 +105,8 @@ main { padding: 72px 0 64px; min-width: 0; }
 .name { font: 600 2.1rem/1.1 var(--serif); letter-spacing: -.01em; }
 .role { margin-top: 10px; color: var(--muted); }
 .org a { color: var(--text); font-weight: 500; }
+.visiting { margin-top: 8px; color: var(--muted); font-size: .88rem; line-height: 1.45; }
+.visiting a { color: var(--text); font-weight: 500; }
 .links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 20px; }
 .links a {
   display: inline-flex; align-items: center; gap: 6px;
@@ -325,6 +327,7 @@ main { padding: 72px 0 64px; min-width: 0; }
 .award-title a { color: var(--text); }
 .award-title a:hover { color: var(--accent); }
 .award-track { margin-top: 2px; font-size: .85rem; color: var(--muted); }
+.award-note { margin-top: 4px; font-size: .78rem; color: var(--faint); font-style: italic; }
 
 /* ---------- Projects ---------- */
 .project-featured, .project {

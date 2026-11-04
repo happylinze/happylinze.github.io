@@ -20,6 +20,9 @@ layout: default
       <h1 class="name">{{ profile.name }}</h1>
       <p class="role">{{ profile.position }}</p>
       <p class="org"><a href="{{ profile.affiliation_link }}" target="_blank" rel="noopener">{{ profile.affiliation }}</a></p>
+      {% if profile.visiting and profile.visiting.affiliation and profile.visiting.affiliation != "" %}
+      <p class="visiting">{{ profile.visiting.position }}<br>{% if profile.visiting.link and profile.visiting.link != "" %}<a href="{{ profile.visiting.link }}" target="_blank" rel="noopener">{{ profile.visiting.affiliation }}</a>{% else %}{{ profile.visiting.affiliation }}{% endif %}</p>
+      {% endif %}
       {% if job.enabled == true %}<p class="status-badge"><span class="dot" aria-hidden="true"></span>{{ job.status }}</p>{% endif %}
 
       <ul class="links">
@@ -150,6 +153,7 @@ layout: default
             <p class="award-rank">{% if a.label and a.label != "" %}{{ a.label }}{% else %}{{ label }} Place{% endif %} <span class="award-venue">· {{ a.venue }}</span></p>
             <p class="award-title"><a href="{{ a.link }}" target="_blank" rel="noopener">{{ a.challenge }}</a></p>
             <p class="award-track">{{ a.track }}{% if a.code and a.code != "" %} · <a href="{{ a.code }}" target="_blank" rel="noopener">code</a>{% endif %}</p>
+            {% if a.note and a.note != "" %}<p class="award-note">{{ a.note }}</p>{% endif %}
           </div>
         </li>
         {% endfor %}

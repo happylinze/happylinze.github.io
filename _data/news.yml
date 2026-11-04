@@ -1,6 +1,6 @@
 # Newest first. `text` supports Markdown.
-- date: Feb 2026
-  text: "Released [HuggingFace-Manager](https://github.com/happylinze/HuggingFace-Manager), an open-source desktop app for searching, downloading and managing Hugging Face models."
+- date: Sep 2026
+  text: "Won **2nd place** in Multimodal Exocentric Event Recognition and **3rd among participating teams** in Multimodal Exocentric Causal Event Grounding at the [ChaLearn UDIVA-HHOI Challenge](https://lap.chalearn.eu/public/udiva-hhoi-challenge-eccv26), held with the CONTEXTUS workshop at ECCV 2026."
 - date: Sep 2024
   text: "Won **2nd place** in the Temporal Sound Localisation track of the [Perception Test Challenge](https://ptchallenge-workshop.github.io/) at ECCV 2024."
 - date: Jul 2024

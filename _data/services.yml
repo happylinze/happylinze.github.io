@@ -1,4 +1,10 @@
 - role: Conference Reviewer
   items:
-    - name: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2024
-      link: https://cvpr.thecvf.com/Conferences/2024
+    - name: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
+      link: https://cvpr.thecvf.com
+    - name: European Conference on Computer Vision (ECCV)
+      link: https://eccv.ecva.net
+    - name: ACM International Conference on Multimedia (ACM MM)
+      link: https://acmmm.org
+    - name: AAAI Conference on Artificial Intelligence (AAAI)
+      link: https://aaai.org/conference/aaai/
