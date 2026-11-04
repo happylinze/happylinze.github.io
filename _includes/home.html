@@ -1,0 +1,225 @@
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign t = site.data.ui[lang] -%}
+{%- assign profile = site.data.profile -%}
+{%- assign zh = nil -%}{%- if lang == "zh" -%}{%- assign zh = profile.zh -%}{%- endif -%}
+{%- assign p_name = profile.name -%}{%- if zh and zh.name and zh.name != "" -%}{%- assign p_name = zh.name -%}{%- endif -%}
+{%- assign p_position = profile.position -%}{%- if zh and zh.position and zh.position != "" -%}{%- assign p_position = zh.position -%}{%- endif -%}
+{%- assign p_affiliation = profile.affiliation -%}{%- if zh and zh.affiliation and zh.affiliation != "" -%}{%- assign p_affiliation = zh.affiliation -%}{%- endif -%}
+{%- assign v_position = profile.visiting.position -%}{%- if zh and zh.visiting_position and zh.visiting_position != "" -%}{%- assign v_position = zh.visiting_position -%}{%- endif -%}
+{%- assign v_affiliation = profile.visiting.affiliation -%}{%- if zh and zh.visiting_affiliation and zh.visiting_affiliation != "" -%}{%- assign v_affiliation = zh.visiting_affiliation -%}{%- endif -%}
+{%- assign p_about = profile.about -%}{%- if zh and zh.about and zh.about != "" -%}{%- assign p_about = zh.about -%}{%- endif -%}
+{%- assign p_interests = profile.interests -%}{%- if zh and zh.interests and zh.interests != "" -%}{%- assign p_interests = zh.interests -%}{%- endif -%}
+{%- assign me = '<span class="me">' | append: profile.name | append: '</span>' -%}
+{%- capture initials -%}{%- assign parts = profile.name | split: " " -%}{%- for p in parts limit: 2 -%}{{ p | slice: 0 }}{%- endfor -%}{%- endcapture -%}
+{%- assign featured = nil -%}{%- for p in site.data.projects -%}{%- if p.image and p.image != "" -%}{%- assign featured = p -%}{%- break -%}{%- endif -%}{%- endfor -%}
+{%- assign job = profile.job_market -%}
+{%- assign j_status = job.status -%}{%- if zh and zh.job_status and zh.job_status != "" -%}{%- assign j_status = zh.job_status -%}{%- endif -%}
+{%- assign j_available = job.available -%}{%- if zh and zh.job_available and zh.job_available != "" -%}{%- assign j_available = zh.job_available -%}{%- endif -%}
+{%- assign j_headline = job.headline -%}{%- if zh and zh.job_headline and zh.job_headline != "" -%}{%- assign j_headline = zh.job_headline -%}{%- endif -%}
+{%- assign j_seeking = job.seeking -%}{%- if zh and zh.job_seeking and zh.job_seeking != "" -%}{%- assign j_seeking = zh.job_seeking -%}{%- endif -%}
+
+<a class="skip" href="#about">{{ t.skip }}</a>
+
+<div class="page">
+  <aside class="sidebar">
+    <div class="profile">
+      {% if profile.avatar and profile.avatar != "" %}
+      <img class="avatar" src="{{ profile.avatar | relative_url }}" alt="{{ t.portrait_of }} {{ p_name }}" width="168" height="168">
+      {% else %}
+      <div class="avatar avatar-mono" aria-hidden="true">{{ initials }}</div>
+      {% endif %}
+      <h1 class="name">{{ p_name }}</h1>
+      {% if p_name != profile.name %}<p class="name-alt">{{ profile.name }}</p>{% endif %}
+      <p class="role">{{ p_position }}</p>
+      <p class="org"><a href="{{ profile.affiliation_link }}" target="_blank" rel="noopener">{{ p_affiliation }}</a></p>
+      {% if profile.visiting and profile.visiting.affiliation and profile.visiting.affiliation != "" %}
+      <p class="visiting">{{ v_position }}<br>{% if profile.visiting.link and profile.visiting.link != "" %}<a href="{{ profile.visiting.link }}" target="_blank" rel="noopener">{{ v_affiliation }}</a>{% else %}{{ v_affiliation }}{% endif %}</p>
+      {% endif %}
+      {% if job.enabled == true %}<p class="status-badge"><span class="dot" aria-hidden="true"></span>{{ j_status }}</p>{% endif %}
+
+      <ul class="links">
+        {% if profile.email and profile.email != "" %}<li><a href="mailto:{{ profile.email }}" title="Email">{% include icon.html name="mail" %}<span>{{ t.email }}</span></a></li>{% endif %}
+        {% if profile.google_scholar and profile.google_scholar != "" %}<li><a href="{{ profile.google_scholar }}" target="_blank" rel="noopener" title="Google Scholar">{% include icon.html name="scholar" %}<span>{{ t.scholar }}</span></a></li>{% endif %}
+        {% if profile.github and profile.github != "" %}<li><a href="{{ profile.github }}" target="_blank" rel="noopener" title="GitHub">{% include icon.html name="github" %}<span>GitHub</span></a></li>{% endif %}
+        {% if profile.cv and profile.cv != "" %}<li><a href="{{ profile.cv | relative_url }}" target="_blank" rel="noopener" title="Curriculum vitae">{% include icon.html name="cv" %}<span>{{ t.cv }}</span></a></li>{% endif %}
+        {% if profile.linkedin and profile.linkedin != "" %}<li><a href="{{ profile.linkedin }}" target="_blank" rel="noopener" title="LinkedIn">{% include icon.html name="link" %}<span>LinkedIn</span></a></li>{% endif %}
+        {% if profile.twitter and profile.twitter != "" %}<li><a href="{{ profile.twitter }}" target="_blank" rel="noopener" title="X / Twitter">{% include icon.html name="link" %}<span>X</span></a></li>{% endif %}
+      </ul>
+    </div>
+
+    <nav class="toc" aria-label="Sections">
+      <a href="#about">{{ t.nav_about }}</a>
+      <a href="#news">{{ t.nav_news }}</a>
+      <a href="#publications">{{ t.nav_publications }}</a>
+      <a href="#honors">{{ t.nav_honors }}</a>
+      <a href="#projects">{{ t.nav_projects }}</a>
+      <a href="#service">{{ t.nav_service }}</a>
+    </nav>
+
+    <div class="tools">
+      <a class="lang-switch" href="{{ t.other_url | relative_url }}" hreflang="{{ t.other_lang }}" lang="{{ t.other_lang }}">{{ t.other_label }}</a>
+      <button class="theme-toggle" type="button" aria-label="{{ t.toggle_theme }}">
+        <span class="when-light">{% include icon.html name="moon" %}</span>
+        <span class="when-dark">{% include icon.html name="sun" %}</span>
+        <span class="theme-label">{{ t.theme }}</span>
+      </button>
+    </div>
+  </aside>
+
+  <main>
+    {% if job.enabled == true %}
+    <section class="job-card" aria-label="{{ j_status }}">
+      <p class="job-eyebrow"><span class="dot" aria-hidden="true"></span>{{ j_status }}{% if j_available and j_available != "" %} · {{ j_available }}{% endif %}</p>
+      <p class="job-headline">{{ j_headline }}</p>
+      <p class="job-seeking">{{ j_seeking }}</p>
+      <div class="job-actions">
+        {% if profile.email and profile.email != "" %}<a class="btn btn-primary" href="mailto:{{ profile.email }}">{% include icon.html name="mail" %}{{ t.get_in_touch }}</a>{% endif %}
+        {% if profile.cv and profile.cv != "" %}<a class="btn" href="{{ profile.cv | relative_url }}" target="_blank" rel="noopener">{% include icon.html name="cv" %}{{ t.download_cv }}</a>{% endif %}
+        {% if profile.google_scholar and profile.google_scholar != "" %}<a class="btn" href="{{ profile.google_scholar }}" target="_blank" rel="noopener">{% include icon.html name="scholar" %}{{ t.google_scholar }}</a>{% endif %}
+      </div>
+    </section>
+    {% endif %}
+
+    <section id="about" class="section">
+      <h2 class="section-title">{{ t.sec_about }}</h2>
+      <div class="prose">{{ p_about | markdownify }}</div>
+      {% if p_interests and p_interests != "" %}
+      <ul class="interests" aria-label="{{ t.interests }}">
+        {% for i in p_interests %}<li>{{ i }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+    </section>
+
+    <section id="news" class="section">
+      <h2 class="section-title">{{ t.sec_news }}</h2>
+      <ul class="news">
+        {% for n in site.data.news limit: profile.news_visible %}
+        {% include news-item.html item=n lang=lang t=t %}
+        {% endfor %}
+      </ul>
+      {% if site.data.news.size > profile.news_visible %}
+      <details class="more">
+        <summary>{{ t.show_earlier }}</summary>
+        <ul class="news">
+          {% for n in site.data.news offset: profile.news_visible %}
+          {% include news-item.html item=n lang=lang t=t %}
+          {% endfor %}
+        </ul>
+      </details>
+      {% endif %}
+    </section>
+
+    <section id="publications" class="section">
+      <h2 class="section-title">{{ t.sec_publications }}</h2>
+      <ol class="pubs">
+        {% for pub in site.data.publications %}
+        {%- assign main_link = pub.pdf | default: pub.arxiv | default: pub.page -%}
+        <li class="pub">
+          <div class="pub-thumb">
+            {% if pub.image and pub.image != "" %}
+            <img src="{{ pub.image | relative_url }}" alt="" loading="lazy">
+            {% else %}
+            <div class="pub-tile" aria-hidden="true"><span>{{ pub.venue_short }}</span><small>{{ pub.year }}</small></div>
+            {% endif %}
+            <span class="venue-badge">{{ pub.venue_short }} {{ pub.year }}</span>
+          </div>
+          <div class="pub-body">
+            <h3 class="pub-title">
+              {% if main_link %}<a href="{{ main_link }}" target="_blank" rel="noopener">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+            </h3>
+            <p class="pub-authors">{{ pub.authors | replace: profile.name, me }}</p>
+            <p class="pub-venue">{{ pub.venue }}, {{ pub.year }}{% if pub.highlight and pub.highlight != "" %} <span class="pub-highlight">{{ pub.highlight }}</span>{% endif %}</p>
+            {% if pub.note and pub.note != "" %}<p class="pub-note">{{ pub.note }}</p>{% endif %}
+            <div class="pub-links">
+              {% if pub.pdf and pub.pdf != "" %}<a class="pill" href="{{ pub.pdf }}" target="_blank" rel="noopener">{{ t.paper }}</a>{% endif %}
+              {% if pub.arxiv and pub.arxiv != "" %}<a class="pill" href="{{ pub.arxiv }}" target="_blank" rel="noopener">arXiv</a>{% endif %}
+              {% if pub.code and pub.code != "" %}<a class="pill" href="{{ pub.code }}" target="_blank" rel="noopener">{% include icon.html name="github" %}{{ t.code }}</a>{% endif %}
+              {% if pub.page and pub.page != "" %}<a class="pill" href="{{ pub.page }}" target="_blank" rel="noopener">{{ t.project_page }}</a>{% endif %}
+              {% if pub.bibtex and pub.bibtex != "" %}
+              <details class="bib">
+                <summary class="pill">BibTeX</summary>
+                <div class="bib-box">
+                  <button class="bib-copy" type="button" data-label="{{ t.copy }}" data-copied="{{ t.copied }}" data-fallback="{{ t.copy_fallback }}">{{ t.copy }}</button>
+                  <pre><code>{{ pub.bibtex | xml_escape }}</code></pre>
+                </div>
+              </details>
+              {% endif %}
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <section id="honors" class="section">
+      <h2 class="section-title">{{ t.sec_honors }}</h2>
+      <ul class="awards">
+        {% for a in site.data.awards %}
+        {%- assign r = a.rank | append: "" -%}
+        {%- case r -%}
+          {%- when "1" -%}{%- assign tier = "gold" -%}{%- assign label = t.medal_1 -%}{%- assign place = t.place_1 -%}
+          {%- when "2" -%}{%- assign tier = "silver" -%}{%- assign label = t.medal_2 -%}{%- assign place = t.place_2 -%}
+          {%- when "3" -%}{%- assign tier = "bronze" -%}{%- assign label = t.medal_3 -%}{%- assign place = t.place_3 -%}
+          {%- else -%}{%- assign tier = "special" -%}{%- assign label = "★" -%}{%- assign place = "" -%}
+        {%- endcase -%}
+        {%- assign a_label = a.label -%}{%- if lang == "zh" and a.label_zh and a.label_zh != "" -%}{%- assign a_label = a.label_zh -%}{%- endif -%}
+        <li class="award">
+          <div class="medal medal-{{ tier }}" aria-hidden="true">{{ label }}</div>
+          <div class="award-body">
+            <p class="award-rank">{% if a_label and a_label != "" %}{{ a_label }}{% else %}{{ place }}{% endif %} <span class="award-venue">· {{ a.venue }}</span></p>
+            <p class="award-title"><a href="{{ a.link }}" target="_blank" rel="noopener">{{ a.challenge }}</a></p>
+            <p class="award-track">{{ a.track }}{% if a.code and a.code != "" %} · <a href="{{ a.code }}" target="_blank" rel="noopener">{{ t.code_link }}</a>{% endif %}</p>
+            {% if a.note and a.note != "" %}<p class="award-note">{{ a.note }}</p>{% endif %}
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section id="projects" class="section">
+      <h2 class="section-title">{{ t.sec_projects }}</h2>
+      {% if featured %}
+      <a class="project-featured" href="{{ featured.link }}" target="_blank" rel="noopener">
+        <div class="project-shot"><img src="{{ featured.image | relative_url }}" alt="{{ t.screenshot_of }} {{ featured.name }}" loading="lazy"></div>
+        <div class="project-info">
+          <p class="eyebrow">{{ t.featured }}</p>
+          <h3>{{ featured.name }} {% include icon.html name="arrow" %}</h3>
+          <p>{% if lang == "zh" and featured.description_zh and featured.description_zh != "" %}{{ featured.description_zh }}{% else %}{{ featured.description }}{% endif %}</p>
+          <ul class="tags">{% for t in featured.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+        </div>
+      </a>
+      {% endif %}
+      <ul class="projects">
+        {% for p in site.data.projects %}
+        {% if featured and p.name == featured.name and p.link == featured.link %}{% continue %}{% endif %}
+        <li>
+          <a class="project" href="{{ p.link }}" target="_blank" rel="noopener">
+            <h3>{% include icon.html name="github" %}{{ p.name }}</h3>
+            <p>{% if lang == "zh" and p.description_zh and p.description_zh != "" %}{{ p.description_zh }}{% else %}{{ p.description }}{% endif %}</p>
+            <ul class="tags">{% for t in p.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section id="service" class="section">
+      <h2 class="section-title">{{ t.sec_service }}</h2>
+      {% for s in site.data.services %}
+      <h3 class="service-role">{% if lang == "zh" and s.role_zh and s.role_zh != "" %}{{ s.role_zh }}{% else %}{{ s.role }}{% endif %}</h3>
+      <ul class="service-list">
+        {% for i in s.items %}<li>{% if i.link and i.link != "" %}<a href="{{ i.link }}" target="_blank" rel="noopener">{{ i.name }}</a>{% else %}{{ i.name }}{% endif %}</li>{% endfor %}
+      </ul>
+      {% endfor %}
+    </section>
+
+    <footer class="footer">
+      <p>© {{ site.time | date: "%Y" }} {{ p_name }} · {{ t.last_updated }} {% if lang == "zh" %}{{ site.time | date: "%Y" }} 年 {{ site.time | date: "%-m" }} 月{% else %}{{ site.time | date: "%B %Y" }}{% endif %}</p>
+      {% if profile.clustrmaps_id and profile.clustrmaps_id != "" %}
+      <div class="visitors">
+        <script type="text/javascript" id="clustrmaps" src="https://cdn.clustrmaps.com/map_v2.js?cl=8a8d94&w=200&t=n&d={{ profile.clustrmaps_id }}&co=transparent&cmo=0e6b6b&cmn=b8860b"></script>
+      </div>
+      {% endif %}
+    </footer>
+  </main>
+</div>

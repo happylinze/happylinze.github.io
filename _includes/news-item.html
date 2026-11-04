@@ -1,0 +1,12 @@
+{%- assign n = include.item -%}
+{%- assign n_text = n.text -%}
+{%- assign n_date = n.date -%}
+{%- if include.lang == "zh" -%}
+  {%- if n.text_zh and n.text_zh != "" -%}{%- assign n_text = n.text_zh -%}{%- endif -%}
+  {%- assign d = n.date | split: " " -%}
+  {%- assign m = nil -%}
+  {%- assign months = include.t.months -%}
+  {%- assign mkey = d | first -%}
+  {%- if d.size == 2 -%}{%- assign m = months[mkey] -%}{%- if m -%}{%- assign n_date = d | last | append: " 年 " | append: m | append: " 月" -%}{%- endif -%}{%- endif -%}
+{%- endif -%}
+<li><time>{{ n_date }}</time><div>{{ n_text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div></li>

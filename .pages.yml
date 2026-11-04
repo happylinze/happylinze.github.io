@@ -70,6 +70,26 @@ content:
         label: Research interests
         type: string
         list: true
+      - name: zh
+        label: 中文版 (Chinese version)
+        description: Shown on the Chinese page at /zh/. Any field left empty falls back to the English value.
+        type: object
+        fields:
+          - { name: name, label: 姓名, type: string }
+          - { name: position, label: 职位, description: "e.g. 博士研究生", type: string }
+          - { name: affiliation, label: 单位, type: string }
+          - { name: visiting_position, label: 访问身份, description: "e.g. 联合培养博士生", type: string }
+          - { name: visiting_affiliation, label: 访问单位, type: string }
+          - name: about
+            label: 个人简介
+            description: "支持 Markdown：**加粗**、[链接文字](https://...)。段落之间空一行。"
+            type: text
+          - { name: interests, label: 研究方向, type: string, list: true }
+          - { name: job_status, label: 求职徽章文字, description: "e.g. 正在求职", type: string }
+          - { name: job_available, label: 可入职时间, description: "e.g. 2027 年夏季起", type: string }
+          - { name: job_headline, label: 一句话研究定位, type: text }
+          - { name: job_seeking, label: 求职方向, type: text }
+          - { name: seo_description, label: 搜索引擎描述, type: text }
       - name: job_market
         label: Job-market mode
         description: Turn on to show an "Open to positions" card at the top of the page.
@@ -94,6 +114,7 @@ content:
     fields:
       - { name: date, label: Date, description: "e.g. Feb 2026. Keep the newest item at the top.", type: string, required: true }
       - { name: text, label: Text, description: "Markdown. Use **bold** and [link text](https://...).", type: text, required: true }
+      - { name: text_zh, label: 中文, description: 中文页显示的内容。留空则显示英文。, type: text }
 
   - name: publications
     label: Publications
@@ -138,6 +159,7 @@ content:
             - { name: "3", label: 3rd place }
             - { name: "Novel", label: Special award }
       - { name: label, label: Award name, description: "Optional. Replaces the default 2nd Place text, e.g. Most Novel Submission", type: string }
+      - { name: label_zh, label: 奖项名称（中文）, description: 只在填写了 Award name 时需要，例如 最具创新性方案奖。, type: string }
       - { name: challenge, label: Challenge, type: string, required: true }
       - { name: track, label: Track, type: string }
       - { name: venue, label: Venue and year, description: "e.g. CVPR 2023", type: string, required: true }
@@ -160,6 +182,7 @@ content:
         type: image
         options: { media: projects }
       - { name: description, label: One-sentence description, type: text }
+      - { name: description_zh, label: 一句话介绍（中文）, description: 留空则显示英文。, type: text }
       - { name: tags, label: Tags, type: string, list: true }
 
   - name: services
@@ -170,6 +193,7 @@ content:
     list: true
     fields:
       - { name: role, label: Role, description: "e.g. Conference Reviewer, Journal Reviewer", type: string, required: true }
+      - { name: role_zh, label: 角色（中文）, description: "e.g. 会议审稿人", type: string }
       - name: items
         label: Venues
         type: object

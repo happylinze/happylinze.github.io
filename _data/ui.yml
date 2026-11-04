@@ -1,0 +1,97 @@
+# Fixed interface text for each language. Page content lives in the other
+# data files; this file only holds labels such as section titles and buttons.
+en:
+  html_lang: en
+  og_locale: en_US
+  url: /
+  other_url: /zh/
+  other_label: 中文
+  other_lang: zh-CN
+  skip: Skip to content
+  nav_about: About
+  nav_news: News
+  nav_publications: Publications
+  nav_honors: Honors
+  nav_projects: Projects
+  nav_service: Service
+  sec_about: About
+  sec_news: News
+  sec_publications: Publications
+  sec_honors: Honors &amp; Competitions
+  sec_projects: Projects
+  sec_service: Service
+  theme: Theme
+  toggle_theme: Toggle dark mode
+  email: Email
+  scholar: Scholar
+  cv: CV
+  interests: Research interests
+  show_earlier: Show earlier news
+  paper: Paper
+  code: Code
+  project_page: Project
+  copy: Copy
+  copied: Copied
+  copy_fallback: Press Ctrl+C
+  place_1: 1st Place
+  place_2: 2nd Place
+  place_3: 3rd Place
+  medal_1: 1st
+  medal_2: 2nd
+  medal_3: 3rd
+  code_link: code
+  featured: Featured · Open source
+  get_in_touch: Get in touch
+  download_cv: Download CV
+  google_scholar: Google Scholar
+  last_updated: Last updated
+  portrait_of: Portrait of
+  screenshot_of: Screenshot of
+zh:
+  html_lang: zh-CN
+  og_locale: zh_CN
+  url: /zh/
+  other_url: /
+  other_label: EN
+  other_lang: en
+  skip: 跳到正文
+  nav_about: 关于我
+  nav_news: 新闻
+  nav_publications: 论文
+  nav_honors: 荣誉
+  nav_projects: 项目
+  nav_service: 学术服务
+  sec_about: 关于我
+  sec_news: 新闻
+  sec_publications: 论文
+  sec_honors: 荣誉与竞赛
+  sec_projects: 项目
+  sec_service: 学术服务
+  theme: 主题
+  toggle_theme: 切换深色模式
+  email: 邮箱
+  scholar: Scholar
+  cv: 简历
+  interests: 研究方向
+  show_earlier: 展开更早的新闻
+  paper: 论文
+  code: 代码
+  project_page: 主页
+  copy: 复制
+  copied: 已复制
+  copy_fallback: 请按 Ctrl+C
+  place_1: 第一名
+  place_2: 第二名
+  place_3: 第三名
+  medal_1: 冠军
+  medal_2: 亚军
+  medal_3: 季军
+  code_link: 代码
+  featured: 精选 · 开源
+  get_in_touch: 联系我
+  download_cv: 下载简历
+  google_scholar: Google Scholar
+  last_updated: 最后更新
+  portrait_of: 照片：
+  screenshot_of: 截图：
+  months: { Jan: 1, Feb: 2, Mar: 3, Apr: 4, May: 5, Jun: 6, Jul: 7, Aug: 8, Sep: 9, Oct: 10, Nov: 11, Dec: 12 }

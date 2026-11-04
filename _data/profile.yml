@@ -53,3 +53,28 @@ job_market:
     interactions from few or zero labelled examples.
   seeking: I am looking for research scientist, research engineer and postdoctoral
     positions in video understanding and multimodal learning.
+zh:
+  name: 李林泽
+  position: 博士研究生
+  affiliation: 江南大学
+  visiting_position: 联合培养博士生
+  visiting_affiliation: 萨里大学视觉、语音与信号处理中心（CVSSP）
+  about: |-
+    我是[江南大学](https://www.jiangnan.edu.cn)博士研究生，导师为[吴小俊教授](https://scholar.google.com/citations?user=5IST34sAAAAJ)。目前在英国[萨里大学视觉、语音与信号处理中心（CVSSP）](https://www.surrey.ac.uk/centre-vision-speech-signal-processing)联合培养，导师为 [Josef Kittler 教授](https://www.surrey.ac.uk/cvssp/people/josef_kittler/)。
+
+    我的研究方向是**视频理解**，重点关注**人体动作识别**与**多模态人际交互理解**，包括小样本与零样本学习、骨架建模、长视频中的时序动作定位，以及结合视频、音频和语言识别社交互动中的事件。
+
+    我也喜欢把研究做成能真正用起来的系统。与队友一起，我在 CVPR、ICCV、ECCV 和 ICME 举办的多项国际竞赛中取得前三名。
+  interests:
+    - 动作识别
+    - 视频理解
+    - 人际交互理解
+    - 多模态学习
+    - 小样本与零样本学习
+    - 骨架建模
+    - 时序动作定位
+  seo_description: 李林泽，江南大学博士研究生，英国萨里大学 CVSSP 联合培养博士生，研究方向为视频理解、动作识别与多模态人际交互理解。
+  job_status: 正在求职
+  job_available: ""
+  job_headline: 我致力于构建视频理解系统，在少量甚至零标注样本的条件下识别人的动作与交互。
+  job_seeking: 正在寻找视频理解与多模态学习方向的研究科学家、研究工程师及博士后职位。

@@ -104,6 +104,7 @@ main { padding: 72px 0 64px; min-width: 0; }
 }
 .name { font: 600 2.1rem/1.1 var(--serif); letter-spacing: -.01em; }
 .role { margin-top: 10px; color: var(--muted); }
+.name-alt { margin-top: 4px; color: var(--faint); font-size: .92rem; letter-spacing: .02em; }
 .org a { color: var(--text); font-weight: 500; }
 .visiting { margin-top: 8px; color: var(--muted); font-size: .88rem; line-height: 1.45; }
 .visiting a { color: var(--text); font-weight: 500; }
@@ -128,8 +129,15 @@ main { padding: 72px 0 64px; min-width: 0; }
 .toc a:hover { color: var(--text); text-decoration: none; }
 .toc a.active { color: var(--accent); border-left-color: var(--accent); }
 
+.tools { margin-top: 28px; display: flex; align-items: center; gap: 8px; }
+.lang-switch {
+  display: inline-flex; align-items: center;
+  border: 1px solid var(--line); border-radius: 999px;
+  color: var(--muted); font: 500 .8rem var(--sans);
+  padding: 6px 12px;
+}
+.lang-switch:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
 .theme-toggle {
-  margin-top: 28px; align-self: flex-start;
   display: inline-flex; align-items: center; gap: 8px;
   background: none; border: 1px solid var(--line); border-radius: 999px;
   color: var(--muted); font: 500 .8rem var(--sans);
@@ -405,7 +413,7 @@ main { padding: 72px 0 64px; min-width: 0; }
   .toc::-webkit-scrollbar { display: none; }
   .toc a { border-left: 0; padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
   .toc a.active { background: var(--accent-soft); }
-  .theme-toggle { position: absolute; top: 16px; right: 16px; margin: 0; }
+  .tools { position: absolute; top: 16px; right: 16px; margin: 0; }
   .theme-label { display: none; }
   main { padding-top: 32px; }
   html { scroll-padding-top: 64px; }
@@ -417,7 +425,7 @@ main { padding: 72px 0 64px; min-width: 0; }
   .pub { grid-template-columns: minmax(0, 1fr); gap: 14px; }
   .pub-thumb { max-width: 100%; aspect-ratio: 16 / 9; }
   .awards, .projects { grid-template-columns: 1fr; }
-  .news li { grid-template-columns: 1fr; gap: 2px; }
+  .news li, :lang(zh-CN) .news li { grid-template-columns: 1fr; gap: 2px; }
   .section-title { font-size: 1.4rem; }
   .job-card { padding: 20px; }
   .job-headline { font-size: 1.25rem; }
@@ -426,3 +434,13 @@ main { padding: 72px 0 64px; min-width: 0; }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* ---------- Chinese ---------- */
+:root:lang(zh-CN) {
+  --serif: "Newsreader", "Noto Serif SC", "Songti SC", "STSong", "SimSun", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+}
+:lang(zh-CN) body { line-height: 1.8; }
+:lang(zh-CN) .prose { max-width: 42em; }
+:lang(zh-CN) .medal { font-size: .78rem; }
+:lang(zh-CN) .news li { grid-template-columns: 104px minmax(0, 1fr); }
