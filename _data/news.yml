@@ -1,0 +1,15 @@
+# Newest first. `text` supports Markdown.
+- date: Feb 2026
+  text: "Released [HuggingFace-Manager](https://github.com/happylinze/HuggingFace-Manager), an open-source desktop app for searching, downloading and managing Hugging Face models."
+- date: Sep 2024
+  text: "Won **2nd place** in the Temporal Sound Localisation track of the [Perception Test Challenge](https://ptchallenge-workshop.github.io/) at ECCV 2024."
+- date: Jul 2024
+  text: "Two papers accepted to **ECCV 2024**: EMP-Net for few-shot action recognition and C2C for zero-shot compositional action recognition."
+- date: Jul 2024
+  text: "Won **2nd place** in two tracks of the [ICME 2024 MMVRAC Challenge](https://sutdcv.github.io/MMVRAC/), skeleton-based action recognition and person re-identification. Our solution paper appears at ICME Workshops 2024."
+- date: Oct 2023
+  text: "Won **3rd place** and the **Most Novel Submission** award in the Temporal Sound Localisation track of the [Perception Test Challenge](https://ptchallenge-workshop.github.io/challenge2023.html) at ICCV 2023."
+- date: Jul 2023
+  text: "Won **2nd place** in the Naturalistic Driving Action Recognition track of the [AI City Challenge](https://www.aicitychallenge.org/2023-ai-city-challenge/) at CVPR 2023."
+- date: Apr 2023
+  text: "Our paper on naturalistic driving action localization is accepted to the **CVPR 2023 Workshops**."

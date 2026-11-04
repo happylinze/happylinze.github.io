@@ -1,37 +1,46 @@
-main:
+# Newest first. Your own name is highlighted automatically.
+# Optional fields: image, pdf, arxiv, code, page, bibtex, note
+- title: "Efficient Few-Shot Action Recognition via Multi-Level Post-Reasoning"
+  authors: Cong Wu, Xiao-Jun Wu, Linze Li, Tianyang Xu, Zhenhua Feng, Josef Kittler
+  venue: European Conference on Computer Vision (ECCV)
+  venue_short: ECCV
+  year: 2024
+  image: /assets/img/publications/emp-net_eccv2024.png
+  code: https://github.com/cong-wu/EMP-Net
 
-  - title: "Efficient Few-Shot Action Recognition via Multi-Level Post-Reasoning"
-    authors: Cong Wu, Xiao-Jun Wu, <strong>Linze Li</strong>, Tianyang Xu, Zhenhua Feng, Josef Kittler
-    conference_short: ECCV
-    conference: European Conference on Computer Vision <strong>(ECCV)</strong>, 2024.
-    code: https://github.com/cong-wu/EMP-Net
-    # notes: Conditionally Accepted
-    image: ./assets/img/conference-and-journal/emp.png
-  
-  - title: "C2C: Component-to-Composition Learning for Zero-Shot Compositional Action Recognition"
-    authors: Rongchang Li, Zhenhua Feng, Tianyang Xu, <strong>Linze Li</strong>, Xiao-Jun Wu, Muhammad Awais, Sara Ahmed, Josef Kittler  
-    conference_short: ECCV
-    conference: European Conference on Computer Vision <strong>(ECCV)</strong>, 2024.
-    pdf: https://arxiv.org/abs/2407.06113
-    code: https://github.com/RongchangLi/ZSCAR_C2C
-    image: ./assets/img/conference-and-journal/c2c_eccv2024.png
-    # notes: Conditionally Accepted
+- title: "C2C: Component-to-Composition Learning for Zero-Shot Compositional Action Recognition"
+  authors: Rongchang Li, Zhenhua Feng, Tianyang Xu, Linze Li, Xiao-Jun Wu, Muhammad Awais, Sara Ahmed, Josef Kittler
+  venue: European Conference on Computer Vision (ECCV)
+  venue_short: ECCV
+  year: 2024
+  image: /assets/img/publications/c2c_eccv2024.png
+  arxiv: https://arxiv.org/abs/2407.06113
+  code: https://github.com/RongchangLi/ZSCAR_C2C
 
-  - title: "TENet: Targetness Entanglement Incorporating with Multi-Scale Pooling and Mutually-Guided Fusion for RGB-E Object Tracking"
-    authors: Pengcheng Shao, Tianyang Xu, Zhangyong Tang, <strong>Linze Li</strong>, Xiao-Jun Wu, Josef Kittler
-    conference_short: arXiv
-    conference: arXiv, 2023.
-    pdf: https://arxiv.org/pdf/2405.05004.pdf
-    code: https://github.com/SSSpc333/TENet
-    image: ./assets/img/conference-and-journal/TENet.png
-    # page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    # bibtex: https://bib.yliu.me/MICCAI23.txt
-    # notes: Early Accept
+- title: "A Hybrid Multi-Perspective Complementary Model for Human Skeleton-Based Action Recognition"
+  authors: Linze Li, Youwei Zhou, Jiannan Hu, Cong Wu, Tianyang Xu, Xiao-Jun Wu
+  venue: IEEE International Conference on Multimedia and Expo Workshops (ICMEW)
+  venue_short: ICMEW
+  year: 2024
+  pdf: https://ieeexplore.ieee.org/abstract/document/10645356
+  code: https://github.com/happylinze/UAV-SAR
+  note: 2nd place, ICME 2024 MMVRAC skeleton-based action recognition
 
-  - title: "Action Probability Calibration for Efficient Naturalistic Driving Action Localization"
-    authors: Rongchang Li, Cong Wu, <strong>Linze Li</strong>, Zhongwei Shen, Tianyang Xu, Xiao-Jun Wu, Xi Li, Jiwen Lu, Josef Kittler
-    conference_short: CVPR Workshop
-    conference: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops <strong>(CVPR Workshop)</strong>, 2023
-    pdf: https://openaccess.thecvf.com/content/CVPR2023W/AICity/papers/Li_Action_Probability_Calibration_for_Efficient_Naturalistic_Driving_Action_Localization_CVPRW_2023_paper.pdf
-    code: https://github.com/RongchangLi/AICity2023_DrivingAction
-    image: ./assets/img/workshop/DrivingTAL.png
+- title: "TENet: Targetness Entanglement Incorporating with Multi-Scale Pooling and Mutually-Guided Fusion for RGB-E Object Tracking"
+  authors: Pengcheng Shao, Tianyang Xu, Zhangyong Tang, Linze Li, Xiao-Jun Wu, Josef Kittler
+  venue: arXiv preprint
+  venue_short: arXiv
+  year: 2024
+  image: /assets/img/publications/tenet_arxiv2024.png
+  arxiv: https://arxiv.org/abs/2405.05004
+  code: https://github.com/SSSpc333/TENet
+
+- title: "Action Probability Calibration for Efficient Naturalistic Driving Action Localization"
+  authors: Rongchang Li, Cong Wu, Linze Li, Zhongwei Shen, Tianyang Xu, Xiao-Jun Wu, Xi Li, Jiwen Lu, Josef Kittler
+  venue: IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)
+  venue_short: CVPRW
+  year: 2023
+  image: /assets/img/publications/apc_cvprw2023.png
+  pdf: https://openaccess.thecvf.com/content/CVPR2023W/AICity/papers/Li_Action_Probability_Calibration_for_Efficient_Naturalistic_Driving_Action_Localization_CVPRW_2023_paper.pdf
+  code: https://github.com/RongchangLi/AICity2023_DrivingAction
+  note: 2nd place, AI City Challenge 2023 Track 3

@@ -1,0 +1,195 @@
+---
+layout: default
+---
+{%- assign me = '<span class="me">' | append: site.name | append: '</span>' -%}
+{%- capture initials -%}{%- assign parts = site.name | split: " " -%}{%- for p in parts limit: 2 -%}{{ p | slice: 0 }}{%- endfor -%}{%- endcapture -%}
+{%- assign featured = site.data.projects | where_exp: "p", "p.image" | first -%}
+
+<a class="skip" href="#about">Skip to content</a>
+
+<div class="page">
+  <aside class="sidebar">
+    <div class="profile">
+      {% if site.avatar != "" %}
+      <img class="avatar" src="{{ site.avatar | relative_url }}" alt="Portrait of {{ site.name }}" width="168" height="168">
+      {% else %}
+      <div class="avatar avatar-mono" aria-hidden="true">{{ initials }}</div>
+      {% endif %}
+      <h1 class="name">{{ site.name }}</h1>
+      <p class="role">{{ site.position }}</p>
+      <p class="org"><a href="{{ site.affiliation_link }}" target="_blank" rel="noopener">{{ site.affiliation }}</a></p>
+
+      <ul class="links">
+        {% if site.email != "" %}<li><a href="mailto:{{ site.email }}" title="Email">{% include icon.html name="mail" %}<span>Email</span></a></li>{% endif %}
+        {% if site.google_scholar != "" %}<li><a href="{{ site.google_scholar }}" target="_blank" rel="noopener" title="Google Scholar">{% include icon.html name="scholar" %}<span>Scholar</span></a></li>{% endif %}
+        {% if site.github != "" %}<li><a href="{{ site.github }}" target="_blank" rel="noopener" title="GitHub">{% include icon.html name="github" %}<span>GitHub</span></a></li>{% endif %}
+        {% if site.cv != "" %}<li><a href="{{ site.cv | relative_url }}" target="_blank" rel="noopener" title="Curriculum vitae">{% include icon.html name="cv" %}<span>CV</span></a></li>{% endif %}
+        {% if site.linkedin != "" %}<li><a href="{{ site.linkedin }}" target="_blank" rel="noopener" title="LinkedIn">{% include icon.html name="link" %}<span>LinkedIn</span></a></li>{% endif %}
+        {% if site.twitter != "" %}<li><a href="{{ site.twitter }}" target="_blank" rel="noopener" title="X / Twitter">{% include icon.html name="link" %}<span>X</span></a></li>{% endif %}
+      </ul>
+    </div>
+
+    <nav class="toc" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#honors">Honors</a>
+      <a href="#projects">Projects</a>
+      <a href="#service">Service</a>
+    </nav>
+
+    <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+      <span class="when-light">{% include icon.html name="moon" %}</span>
+      <span class="when-dark">{% include icon.html name="sun" %}</span>
+      <span class="theme-label">Theme</span>
+    </button>
+  </aside>
+
+  <main>
+    <section id="about" class="section">
+      <h2 class="section-title">About</h2>
+      <div class="prose">
+        <p>
+          I am a Ph.D. student at <a href="{{ site.affiliation_link }}" target="_blank" rel="noopener">Jiangnan University</a>,
+          supervised by <a href="https://scholar.google.com/citations?user=5IST34sAAAAJ" target="_blank" rel="noopener">Prof. Xiao-Jun Wu</a>.
+          My research is on <strong>video understanding</strong>, with a focus on <strong>human action recognition</strong>:
+          learning from few or zero labelled examples, modelling skeletons, and localizing actions in long, untrimmed videos.
+        </p>
+        <p>
+          I also enjoy turning research into working systems. With my teammates I have placed in the top three at
+          challenges held with CVPR, ICCV, ECCV and ICME, and I build open-source tools such as
+          <a href="https://github.com/happylinze/HuggingFace-Manager" target="_blank" rel="noopener">HuggingFace-Manager</a>.
+        </p>
+      </div>
+      <ul class="interests" aria-label="Research interests">
+        <li>Action recognition</li>
+        <li>Video understanding</li>
+        <li>Few- &amp; zero-shot learning</li>
+        <li>Skeleton-based modelling</li>
+        <li>Temporal action localization</li>
+        <li>Multi-modal learning</li>
+      </ul>
+    </section>
+
+    <section id="news" class="section">
+      <h2 class="section-title">News</h2>
+      <ul class="news">
+        {% for n in site.data.news limit: site.news_visible %}
+        <li><time>{{ n.date }}</time><div>{{ n.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div></li>
+        {% endfor %}
+      </ul>
+      {% if site.data.news.size > site.news_visible %}
+      <details class="more">
+        <summary>Show earlier news</summary>
+        <ul class="news">
+          {% for n in site.data.news offset: site.news_visible %}
+          <li><time>{{ n.date }}</time><div>{{ n.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div></li>
+          {% endfor %}
+        </ul>
+      </details>
+      {% endif %}
+    </section>
+
+    <section id="publications" class="section">
+      <h2 class="section-title">Publications</h2>
+      <ol class="pubs">
+        {% for pub in site.data.publications %}
+        {%- assign main_link = pub.pdf | default: pub.arxiv | default: pub.page -%}
+        <li class="pub">
+          <div class="pub-thumb">
+            {% if pub.image %}
+            <img src="{{ pub.image | relative_url }}" alt="" loading="lazy">
+            {% else %}
+            <div class="pub-tile" aria-hidden="true"><span>{{ pub.venue_short }}</span><small>{{ pub.year }}</small></div>
+            {% endif %}
+            <span class="venue-badge">{{ pub.venue_short }} {{ pub.year }}</span>
+          </div>
+          <div class="pub-body">
+            <h3 class="pub-title">
+              {% if main_link %}<a href="{{ main_link }}" target="_blank" rel="noopener">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+            </h3>
+            <p class="pub-authors">{{ pub.authors | replace: site.name, me }}</p>
+            <p class="pub-venue">{{ pub.venue }}, {{ pub.year }}</p>
+            {% if pub.note %}<p class="pub-note">{{ pub.note }}</p>{% endif %}
+            <div class="pub-links">
+              {% if pub.pdf %}<a class="pill" href="{{ pub.pdf }}" target="_blank" rel="noopener">Paper</a>{% endif %}
+              {% if pub.arxiv %}<a class="pill" href="{{ pub.arxiv }}" target="_blank" rel="noopener">arXiv</a>{% endif %}
+              {% if pub.code %}<a class="pill" href="{{ pub.code }}" target="_blank" rel="noopener">{% include icon.html name="github" %}Code</a>{% endif %}
+              {% if pub.page %}<a class="pill" href="{{ pub.page }}" target="_blank" rel="noopener">Project</a>{% endif %}
+              {% if pub.bibtex %}<a class="pill" href="{{ pub.bibtex }}" target="_blank" rel="noopener">BibTeX</a>{% endif %}
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <section id="honors" class="section">
+      <h2 class="section-title">Honors &amp; Competitions</h2>
+      <ul class="awards">
+        {% for a in site.data.awards %}
+        {%- case a.rank -%}
+          {%- when 1 -%}{%- assign tier = "gold" -%}{%- assign label = "1st" -%}
+          {%- when 2 -%}{%- assign tier = "silver" -%}{%- assign label = "2nd" -%}
+          {%- when 3 -%}{%- assign tier = "bronze" -%}{%- assign label = "3rd" -%}
+          {%- else -%}{%- assign tier = "special" -%}{%- assign label = "★" -%}
+        {%- endcase -%}
+        <li class="award">
+          <div class="medal medal-{{ tier }}" aria-hidden="true">{{ label }}</div>
+          <div class="award-body">
+            <p class="award-rank">{% if a.label %}{{ a.label }}{% else %}{{ label }} Place{% endif %} <span class="award-venue">· {{ a.venue }}</span></p>
+            <p class="award-title"><a href="{{ a.link }}" target="_blank" rel="noopener">{{ a.challenge }}</a></p>
+            <p class="award-track">{{ a.track }}{% if a.code %} · <a href="{{ a.code }}" target="_blank" rel="noopener">code</a>{% endif %}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section id="projects" class="section">
+      <h2 class="section-title">Projects</h2>
+      {% if featured %}
+      <a class="project-featured" href="{{ featured.link }}" target="_blank" rel="noopener">
+        <div class="project-shot"><img src="{{ featured.image | relative_url }}" alt="Screenshot of {{ featured.name }}" loading="lazy"></div>
+        <div class="project-info">
+          <p class="eyebrow">Featured · Open source</p>
+          <h3>{{ featured.name }} {% include icon.html name="arrow" %}</h3>
+          <p>{{ featured.description }}</p>
+          <ul class="tags">{% for t in featured.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+        </div>
+      </a>
+      {% endif %}
+      <ul class="projects">
+        {% for p in site.data.projects %}
+        {% if featured and p.name == featured.name %}{% continue %}{% endif %}
+        <li>
+          <a class="project" href="{{ p.link }}" target="_blank" rel="noopener">
+            <h3>{% include icon.html name="github" %}{{ p.name }}</h3>
+            <p>{{ p.description }}</p>
+            <ul class="tags">{% for t in p.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section id="service" class="section">
+      <h2 class="section-title">Service</h2>
+      {% for s in site.data.services %}
+      <h3 class="service-role">{{ s.role }}</h3>
+      <ul class="service-list">
+        {% for i in s.items %}<li>{% if i.link %}<a href="{{ i.link }}" target="_blank" rel="noopener">{{ i.name }}</a>{% else %}{{ i.name }}{% endif %}</li>{% endfor %}
+      </ul>
+      {% endfor %}
+    </section>
+
+    <footer class="footer">
+      <p>© {{ site.time | date: "%Y" }} {{ site.name }} · Last updated {{ site.time | date: "%B %Y" }}</p>
+      {% if site.clustrmaps_id != "" %}
+      <div class="visitors">
+        <script type="text/javascript" id="clustrmaps" src="https://cdn.clustrmaps.com/map_v2.js?cl=8a8d94&w=200&t=n&d={{ site.clustrmaps_id }}&co=transparent&cmo=0e6b6b&cmn=b8860b"></script>
+      </div>
+      {% endif %}
+    </footer>
+  </main>
+</div>

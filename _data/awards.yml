@@ -1,0 +1,35 @@
+# rank: 1, 2, 3 or a short label such as "Novel"
+- rank: 2
+  challenge: Perception Test Challenge
+  track: Temporal Sound Localisation
+  venue: ECCV 2024
+  link: https://ptchallenge-workshop.github.io/
+- rank: 2
+  challenge: ICME MMVRAC Challenge
+  track: Skeleton-based Action Recognition
+  venue: ICME 2024
+  link: https://sutdcv.github.io/MMVRAC/
+  code: https://github.com/happylinze/UAV-SAR
+- rank: 2
+  challenge: ICME MMVRAC Challenge
+  track: Person Re-identification
+  venue: ICME 2024
+  link: https://sutdcv.github.io/MMVRAC/
+  code: https://github.com/happylinze/UAV_ReID
+- rank: Novel
+  label: Most Novel Submission
+  challenge: Perception Test Challenge
+  track: Temporal Sound Localisation
+  venue: ICCV 2023
+  link: https://ptchallenge-workshop.github.io/challenge2023.html
+- rank: 3
+  challenge: Perception Test Challenge
+  track: Temporal Sound Localisation
+  venue: ICCV 2023
+  link: https://ptchallenge-workshop.github.io/challenge2023.html
+- rank: 2
+  challenge: AI City Challenge
+  track: Naturalistic Driving Action Recognition
+  venue: CVPR 2023
+  link: https://www.aicitychallenge.org/2023-ai-city-challenge/
+  code: https://github.com/RongchangLi/AICity2023_DrivingAction
