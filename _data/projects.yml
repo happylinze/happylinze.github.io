@@ -3,20 +3,25 @@
 - name: multi-modal-tsm
   link: https://github.com/happylinze/multi-modal-tsm
   description: Official baseline for Track 3, Multi-Modal Action Recognition, of the ICPR 2024 Multi-Modal Visual Pattern Recognition Challenge.
+  description_zh: ICPR 2024 多模态视觉模式识别挑战赛 Track 3（多模态动作识别）的官方基线。
   tags: [PyTorch, RGB · Depth · IR, Baseline]
 - name: UAV-SAR
   link: https://github.com/happylinze/UAV-SAR
   description: An ensemble of three skeleton models for action recognition on drone footage, 2nd place at ICME 2024 MMVRAC.
+  description_zh: 集成三种骨架模型的无人机视角动作识别方案，获 ICME 2024 MMVRAC 第二名。
   tags: [PyTorch, Skeleton]
 - name: UAV_ReID
   link: https://github.com/happylinze/UAV_ReID
   description: Person re-identification on drone footage built on AGW, 2nd place at ICME 2024 MMVRAC.
+  description_zh: 基于 AGW 的无人机视角行人重识别方案，获 ICME 2024 MMVRAC 第二名。
   tags: [PyTorch, Re-ID]
 - name: AICity2023 Driving Action
   link: https://github.com/RongchangLi/AICity2023_DrivingAction
   description: Driving action localization with probability calibration, 2nd place at the AI City Challenge 2023.
+  description_zh: 基于动作概率校准的自然驾驶动作定位方法，获 AI City Challenge 2023 第二名。
   tags: [PyTorch, Localization]
 - name: HuggingFace-Manager
   link: https://github.com/happylinze/HuggingFace-Manager
   description: A desktop app for searching, downloading and managing Hugging Face models.
+  description_zh: 用于搜索、下载和管理 Hugging Face 模型的桌面应用。
   tags: [Python, Desktop app]

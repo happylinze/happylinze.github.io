@@ -15,6 +15,15 @@ You can also upload figures, a profile photo and a CV.
 Every save is a commit, and GitHub Pages republishes the site within a few minutes.
 The forms are defined in `.pages.yml`.
 
+## Chinese version
+
+The Chinese page lives at https://happylinze.github.io/zh/, and the sidebar has an EN / 中文 switch.
+Section titles and buttons are translated in `_data/ui.yml`.
+Your Chinese name, positions, About text, interests and job-market text are in the **中文版** group under **Profile & About** in Pages CMS.
+News, projects, special award names and service roles each have an optional Chinese field.
+Any Chinese field left empty shows the English text instead.
+Paper titles, authors, venues and challenge names stay in English on both pages.
+
 ## Job-market mode
 
 Open **Profile & About** in Pages CMS and turn on **Show job-market card**.

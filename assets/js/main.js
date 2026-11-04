@@ -41,15 +41,20 @@ document.addEventListener('click', function (e) {
   if (!btn) return;
   var code = btn.parentNode.querySelector('code');
   var text = code ? code.textContent : '';
+  var labels = {
+    idle: btn.getAttribute('data-label') || 'Copy',
+    copied: btn.getAttribute('data-copied') || 'Copied',
+    fallback: btn.getAttribute('data-fallback') || 'Press Ctrl+C'
+  };
   function done(label) {
     btn.textContent = label;
-    setTimeout(function () { btn.textContent = 'Copy'; }, 1600);
+    setTimeout(function () { btn.textContent = labels.idle; }, 1600);
   }
   if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(function () { done('Copied'); }, function () { done('Press Ctrl+C'); });
+    navigator.clipboard.writeText(text).then(function () { done(labels.copied); }, function () { done(labels.fallback); });
   } else {
     var r = document.createRange(); r.selectNodeContents(code);
     var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
-    done('Press Ctrl+C');
+    done(labels.fallback);
   }
 });

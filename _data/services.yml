@@ -1,4 +1,5 @@
 - role: Conference Reviewer
+  role_zh: 会议审稿人
   items:
     - name: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
       link: https://cvpr.thecvf.com

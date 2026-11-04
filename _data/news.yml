@@ -1,15 +1,23 @@
-# Newest first. `text` supports Markdown.
+# Newest first. `text` and `text_zh` support Markdown. Leave text_zh empty to
+# show the English text on the Chinese page.
 - date: Sep 2026
-  text: "Won **2nd place** in Multimodal Exocentric Event Recognition and **3rd among participating teams** in Multimodal Exocentric Causal Event Grounding at the [ChaLearn UDIVA-HHOI Challenge](https://lap.chalearn.eu/public/udiva-hhoi-challenge-eccv26), held with the CONTEXTUS workshop at ECCV 2026."
+  text: "Won **2nd place** in Multimodal Exocentric Event Recognition and **3rd place** in Multimodal Exocentric Causal Event Grounding at the [ChaLearn UDIVA-HHOI Challenge](https://lap.chalearn.eu/public/udiva-hhoi-challenge-eccv26), held with the CONTEXTUS workshop at ECCV 2026."
+  text_zh: "在 ECCV 2026 CONTEXTUS 研讨会举办的 [ChaLearn UDIVA-HHOI 挑战赛](https://lap.chalearn.eu/public/udiva-hhoi-challenge-eccv26)中，获得 Multimodal Exocentric Event Recognition 赛道**第二名**和 Multimodal Exocentric Causal Event Grounding 赛道**第三名**。"
 - date: Sep 2024
   text: "Won **2nd place** in the Temporal Sound Localisation track of the [Perception Test Challenge](https://ptchallenge-workshop.github.io/) at ECCV 2024."
+  text_zh: "获得 ECCV 2024 [Perception Test 挑战赛](https://ptchallenge-workshop.github.io/) Temporal Sound Localisation 赛道**第二名**。"
 - date: Jul 2024
   text: "Two papers accepted to **ECCV 2024**: EMP-Net for few-shot action recognition and C2C for zero-shot compositional action recognition."
+  text_zh: "两篇论文被 **ECCV 2024** 接收：小样本动作识别方法 EMP-Net，以及零样本组合动作识别方法 C2C。"
 - date: Jul 2024
   text: "Won **2nd place** in two tracks of the [ICME 2024 MMVRAC Challenge](https://sutdcv.github.io/MMVRAC/), skeleton-based action recognition and person re-identification. Our solution paper appears at ICME Workshops 2024."
+  text_zh: "在 [ICME 2024 MMVRAC 挑战赛](https://sutdcv.github.io/MMVRAC/)中获得骨架动作识别和行人重识别两个赛道的**第二名**，方案论文发表于 ICME 2024 Workshops。"
 - date: Oct 2023
   text: "Won **3rd place** and the **Most Novel Submission** award in the Temporal Sound Localisation track of the [Perception Test Challenge](https://ptchallenge-workshop.github.io/challenge2023.html) at ICCV 2023."
+  text_zh: "获得 ICCV 2023 [Perception Test 挑战赛](https://ptchallenge-workshop.github.io/challenge2023.html) Temporal Sound Localisation 赛道**第三名**及**最具创新性方案奖**（Most Novel Submission）。"
 - date: Jul 2023
   text: "Won **2nd place** in the Naturalistic Driving Action Recognition track of the [AI City Challenge](https://www.aicitychallenge.org/2023-ai-city-challenge/) at CVPR 2023."
+  text_zh: "获得 CVPR 2023 [AI City 挑战赛](https://www.aicitychallenge.org/2023-ai-city-challenge/) Naturalistic Driving Action Recognition 赛道**第二名**。"
 - date: Apr 2023
   text: "Our paper on naturalistic driving action localization is accepted to the **CVPR 2023 Workshops**."
+  text_zh: "关于自然驾驶动作定位的论文被 **CVPR 2023 Workshops** 接收。"

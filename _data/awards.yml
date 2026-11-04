@@ -27,6 +27,7 @@
   code: https://github.com/happylinze/UAV_ReID
 - rank: Novel
   label: Most Novel Submission
+  label_zh: 最具创新性方案奖
   challenge: Perception Test Challenge
   track: Temporal Sound Localisation
   venue: ICCV 2023
